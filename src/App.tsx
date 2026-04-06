@@ -1,6 +1,5 @@
-import React from 'react';
 import { BookingProvider } from './context/BookingContext';
-import MyBookings from './pages/MyBookings';
+import MyBookings from './app/pages/MyBookings';
 
 function App() {
   return (
