@@ -1,5 +1,9 @@
 import { useMemo } from 'react';
+<<<<<<< HEAD
 import { type Room, type FilterOptions } from '../types';
+=======
+import type { Room, FilterOptions } from '../../types';
+>>>>>>> 4da003d9da55948f02f6ff571110dc052dc6a3c7
 
 export function useRoomFilter(rooms: Room[], filters: FilterOptions) {
   const filteredRooms = useMemo(() => {
@@ -30,4 +34,8 @@ export function useRoomFilter(rooms: Room[], filters: FilterOptions) {
   }, [rooms, filters]);
 
   return filteredRooms;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4da003d9da55948f02f6ff571110dc052dc6a3c7

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { Room } from '../types';
+=======
+import type { Room } from '../../types';
+>>>>>>> 4da003d9da55948f02f6ff571110dc052dc6a3c7
 
 export const mockRooms: Room[] = [
   {
@@ -97,4 +101,8 @@ export const mockRooms: Room[] = [
     available: true,
     size: 30,
   },
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> 4da003d9da55948f02f6ff571110dc052dc6a3c7
