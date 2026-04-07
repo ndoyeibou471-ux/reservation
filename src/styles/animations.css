@@ -1,0 +1,238 @@
+/* Animations et styles personnalisés pour HotelLux */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Classes d'animation */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-pulse-gentle {
+  animation: pulse 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Styles pour les boutons améliorés */
+.btn-primary {
+  background: linear-gradient(135deg, var(--hotel-purple) 0%, var(--hotel-purple-light) 100%);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--hotel-gold) 0%, var(--hotel-gold-dark) 100%);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+/* Styles pour les cartes avec effet de survol */
+.card-hover {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--hotel-purple);
+}
+
+/* Effet de chargement pour les images */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Styles pour les étoiles */
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: var(--hotel-gold);
+  transition: all 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+/* Styles pour les témoignages */
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+}
+
+/* Styles pour le header avec effet de verre */
+.header-glass {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animation d'entrée progressive pour les éléments */
+.stagger-animation > * {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Styles pour les badges et indicateurs */
+.badge-glow {
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  animation: pulse 2s infinite;
+}
+
+/* Styles pour les formulaires améliorés */
+.form-input {
+  transition: all 0.3s ease;
+  border: 2px solid var(--border);
+}
+
+.form-input:focus {
+  border-color: var(--hotel-purple);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Styles pour les sections avec dégradé */
+.section-gradient {
+  background: linear-gradient(135deg, var(--hotel-gray-light) 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+/* Animation pour les icônes */
+.icon-bounce {
+  transition: all 0.3s ease;
+}
+
+.icon-bounce:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Animation delays pour les éléments échelonnés */
+.animate-delay-02 {
+  animation-delay: 0.2s;
+}
+
+/* Styles pour les tooltips améliorés */
+.tooltip {
+  background: var(--hotel-purple);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Styles pour les images avec fallback */
+.image-fallback-container {
+  display: inline-block;
+  background-color: rgb(243 244 246);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.image-fallback-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
